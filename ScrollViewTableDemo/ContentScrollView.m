@@ -68,10 +68,10 @@
 {
     if (!self.canMove)
     {
-        [scrollView setContentOffset:CGPointMake(0, 0)];
+        [scrollView setContentOffset:CGPointZero];
         for (UITableView *table in self.subviews)
         {
-            [table setContentOffset:CGPointMake(0, 0)];
+            [table setContentOffset:CGPointZero];
         }
     }
     

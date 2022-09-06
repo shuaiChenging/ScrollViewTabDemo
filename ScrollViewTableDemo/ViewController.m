@@ -35,7 +35,7 @@
         _mainScroollView = [[MainScrollView alloc] initWithFrame:CGRectMake(0, StatusH + NavigationBarH, [UIScreen mainScreen].bounds.size.width, self.view.frame.size.height-StatusH-NavigationBarH)];
         _mainScroollView.delegate = self;
         _mainScroollView.backgroundColor = [UIColor yellowColor];
-        _mainScroollView.contentSize = CGSizeMake(0, [UIScreen mainScreen].bounds.size.height + 200);
+        _mainScroollView.contentSize = CGSizeMake(0, [UIScreen mainScreen].bounds.size.height + MAXOFFSETY);
         if (@available(iOS 11.0, *))
         {
             _mainScroollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

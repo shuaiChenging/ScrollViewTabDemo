@@ -6,7 +6,7 @@
 //
 
 #import "MainScrollView.h"
-
+#import "ContentScrollView.h"
 @implementation MainScrollView
 
 /// 支持多手势
@@ -14,6 +14,10 @@
 /// @param otherGestureRecognizer otherGestureRecognizer description
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
+    if ([gestureRecognizer.view isKindOfClass:ContentScrollView.class])
+    {
+        return NO;
+    }
     return YES;
 }
 
