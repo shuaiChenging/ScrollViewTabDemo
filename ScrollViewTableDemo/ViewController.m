@@ -9,7 +9,7 @@
 #import "MainScrollView.h"
 #import "ContentScrollView.h"
 #import "Masonry.h"
-#define MAXOFFSETY 160  // 最大偏移量
+#define MAXOFFSETY 80  // 最大偏移量
 #define StatusH [UIApplication sharedApplication].statusBarFrame.size.height
 #define NavigationBarH self.navigationController.navigationBar.frame.size.height
 
@@ -57,7 +57,7 @@
     topView.backgroundColor = [UIColor redColor];
     [_mainScroollView addSubview:topView];
     
-    ContentScrollView *contentScrollView = [[ContentScrollView alloc] initWithFrame:CGRectMake(0, 200,[UIScreen mainScreen].bounds.size.width, _mainScroollView.frame.size.height)];
+    ContentScrollView *contentScrollView = [[ContentScrollView alloc] initWithFrame:CGRectMake(0, 200,[UIScreen mainScreen].bounds.size.width, _mainScroollView.frame.size.height - (200 - MAXOFFSETY))];
     contentScrollView.contentSize = CGSizeMake(4 * [UIScreen mainScreen].bounds.size.width, 0);
     [_mainScroollView addSubview:contentScrollView];
     
