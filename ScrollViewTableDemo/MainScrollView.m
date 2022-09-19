@@ -14,10 +14,6 @@
 /// @param otherGestureRecognizer otherGestureRecognizer description
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    if ([gestureRecognizer.view isKindOfClass:ContentScrollView.class])
-    {
-        return NO;
-    }
     return YES;
 }
 

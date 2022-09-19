@@ -66,6 +66,11 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if ([scrollView isKindOfClass:UITableView.class])
+    {
+        NSLog(@"i am tableView");
+    }
+    
     if (!self.canMove)
     {
         [scrollView setContentOffset:CGPointZero];
